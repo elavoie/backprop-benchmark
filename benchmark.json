@@ -10,5 +10,10 @@
         "large": 10000000 
     },
     "random-seed":1337,
-    "dwarf": "unstructured grid"
+    "dwarf": "unstructured grid",
+    "implementations": {
+        "c": "git@github.com:Sable/backprop-c-implementation",
+        "js": "git@github.com:Sable/backprop-js-implementation",
+        "matlab": "git@github.com:Sable/backprop-matlab-implementation"
+    }
 }
