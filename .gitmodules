@@ -1,0 +1,3 @@
+[submodule "implementations/c/common"]
+	path = implementations/c/common
+	url = git@github.com:Sable/ostrich-c-implementation-common.git
