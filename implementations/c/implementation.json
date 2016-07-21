@@ -13,10 +13,10 @@
     "libraries":[
         { "file": "./imagenet.c"},
         { "file": "./backprop.c"},
-        { "suite-root": "/implementations/c/common.c"},
-        { "suite-root": "/implementations/c/common_rand.c"}
+        { "file": "./common/common.c"},
+        { "file": "./common/common_rand.c"}
     ],
     "include-directories":[
-        { "suite-root": "/implementations/c/"}
+        { "file": "./common/"}
     ]
 }
