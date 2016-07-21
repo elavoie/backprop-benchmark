@@ -20,9 +20,6 @@
         { "file": "./common/"}
     ],
     "dependencies": {
-        "repo": {
-            "local": { "file" : "./common" },
-            "url": "git@github.com:Sable/ostrich-c-implementation-common"
-        }
+        "./common":  "git@github.com:Sable/ostrich-c-implementation-common"
     }
 }
