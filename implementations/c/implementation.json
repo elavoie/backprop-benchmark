@@ -27,6 +27,6 @@
     ],
     "compatibilities": [
         "https://github.com/Sable/ostrich-gcc-compiler.git",
-        "https://github.com:Sable/ostrich-native-environment.git"
+        "https://github.com/Sable/ostrich-native-environment.git"
     ]
 }
