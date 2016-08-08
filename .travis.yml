@@ -1,5 +1,11 @@
 language: node_js
 
+node_js:
+  - "node"
+  - "6"
+  - "5"
+  - "4"
+
 script:
   - export GITHUB_REPO=$(pwd)
   - git clone https://github.com/Sable/wu-wei-benchmarking-toolkit.git /tmp/wu && cd /tmp/wu && npm install && npm link
