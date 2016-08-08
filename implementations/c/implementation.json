@@ -18,5 +18,15 @@
     ],
     "include-directories":[
         { "file": "./common/"}
+    ],
+    "dependencies": [
+        {
+            "source": "git@github.com:Sable/ostrich-c-implementation-common",
+            "destination": "./common"
+        }
+    ],
+    "compatibilities": [
+        "git@github.com:Sable/ostrich-gcc-compiler",
+        "git@github.com:Sable/ostrich-native-environment"
     ]
 }
