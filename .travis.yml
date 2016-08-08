@@ -2,7 +2,7 @@ language: node_js
 
 script:
   - export GITHUB_REPO=$(pwd)
-  - git clone git@github.com:Sable/wu-wei-benchmarking-toolkit /tmp/wu && cd /tmp/wu && npm install && npm link
+  - git clone https://github.com/Sable/wu-wei-benchmarking-toolkit.git /tmp/wu && cd /tmp/wu && npm install && npm link
   - mkdir /tmp/test && cd /tmp/test
   - wu init
   - wu platform --save --short-name travis
