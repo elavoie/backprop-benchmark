@@ -10,8 +10,8 @@ script:
   - mkdir /tmp/test && cd /tmp/test
   - wu init
   - wu platform --save --short-name travis
-  - wu install --compatibilities $GITHUB_REPO
-  - wu run
+  - wu install --compatibilities $GITHUB_REPO -v
+  - wu run -v
   - wu report
 branches:
   only:
