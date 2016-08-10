@@ -1,0 +1,26 @@
+{
+    "type": "implementation",
+    "short-name":"js",
+    "description":"JavaScript implementation",
+    "language":"js",
+    "core-source-files":[
+    ],
+    "runner-source-file": { "file": "./backprop.js" },
+    "runner-arguments": [
+        {
+            "expand": "/experiment/input-size"
+        }    
+    ],
+    "libraries":[
+        { "file": "./common/common_rand.js" }
+    ],
+    "dependencies": [
+        {
+            "source": "https://github.com/Sable/ostrich-js-implementation-common.git",
+            "destination": "./common"
+        }
+    ],
+    "compatibilities": [
+        "https://github.com/Sable/ostrich-browserify-compiler.git"
+    ]
+}
