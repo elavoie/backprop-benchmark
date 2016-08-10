@@ -286,6 +286,7 @@ int nh, no;
 
 void bpnn_adjust_weights(delta, ndelta, ly, nly, w, oldw)
 float *delta, *ly, **w, **oldw;
+int ndelta, nly;
 {
     float new_dw;
     int k, j;
