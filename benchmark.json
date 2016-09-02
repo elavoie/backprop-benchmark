@@ -9,6 +9,9 @@
         "medium": 2850000,
         "large": 10000000 
     },
+    "expected-output": {
+        "medium": 1085564
+    },
     "random-seed":1337,
     "dwarf": "unstructured grid"
 }

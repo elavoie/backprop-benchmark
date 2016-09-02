@@ -221,7 +221,8 @@ function backprop_face(layer_size) {
     return {
         status: 1,
         options: "run (" + layer_size + ")",
-        time: (time1 - time0) / 1000
+        time: (time1 - time0) / 1000,
+        output: Math.floor(sum_of_hidden_weights/eps)
     };
 }
 

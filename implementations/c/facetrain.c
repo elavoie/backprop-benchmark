@@ -30,6 +30,7 @@ void backprop_face() {
     long long time0,time1;
     double sum_of_hidden_weights = 0;
     double expected_sum_of_hidden_weights = 10.855641469359398;
+    double eps = 0.00001;
     int expected_layer_size = 2850000;
     net = bpnn_create(layer_size, 16, 1); // (16, 1 can not be changed)
     load(net);
@@ -56,7 +57,7 @@ void backprop_face() {
     //fprintf(stderr, "Output: %.4f\t%.4f\n", net->output_units[1], net->output_delta[1]);
     bpnn_free(net);
     //fprintf(stderr, "Training done\n");
-    printf("{ \"status\": %d, \"options\": \"%d\", \"time\": %f }\n", 1, layer_size, (float) (time1-time0) / 1000000);
+    printf("{ \"status\": %d, \"options\": \"%d\", \"time\": %f, \"output\": %d }\n", 1, layer_size, (float) (time1-time0) / 1000000, (int)floor(sum_of_hidden_weights/eps));
 }
 
 int main(argc, argv)
