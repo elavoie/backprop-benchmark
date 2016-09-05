@@ -81,3 +81,8 @@ disp(', "output":');
 disp(int32(floor((sum_of_hidden_weights*layer_size*ADJUST))));
 disp('}');
 end
+
+function [output] = squash(input)
+    output = 1.0 ./ (1.0 + exp(-input));
+end
+
