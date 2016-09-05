@@ -40,24 +40,17 @@ void backprop_face() {
     time1 = gettime();
 
 
-    if (layer_size == expected_layer_size) {
-        for (i=1; i<=net->hidden_n; ++i) {
-            for (j=1; j<=net->output_n; ++j) {
-                sum_of_hidden_weights += net->hidden_weights[i][j];
-            }
+    for (i=1; i<=net->hidden_n; ++i) {
+        for (j=1; j<=net->output_n; ++j) {
+            sum_of_hidden_weights += net->hidden_weights[i][j];
         }
-        if (sum_of_hidden_weights != expected_sum_of_hidden_weights) {
-            fprintf(stderr, "ERROR: expected a sum of hidden weights of '%f' for an input size of '%d' but got '%f' instead\n", expected_sum_of_hidden_weights, expected_layer_size, sum_of_hidden_weights);
-            exit(1);
-        }
-    } else {
-        fprintf(stderr, "WARNING: no self-checking for input size of '%d'\n", layer_size);
     }
 
     //fprintf(stderr, "Output: %.4f\t%.4f\n", net->output_units[1], net->output_delta[1]);
     bpnn_free(net);
     //fprintf(stderr, "Training done\n");
-    printf("{ \"status\": %d, \"options\": \"%d\", \"time\": %f, \"output\": %d }\n", 1, layer_size, (float) (time1-time0) / 1000000, (int)floor(sum_of_hidden_weights/eps));
+    double ADJUST = 0.1;
+    printf("{ \"status\": %d, \"options\": \"%d\", \"time\": %f, \"output\": %ld }\n", 1, layer_size, (float) (time1-time0) / 1000000, (long int)floor(sum_of_hidden_weights*layer_size*ADJUST));
 }
 
 int main(argc, argv)
